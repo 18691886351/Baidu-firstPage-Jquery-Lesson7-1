@@ -11,6 +11,10 @@ html {
     height: 100%;
 }
 
+ul li {
+    list-style-type: none;
+}
+
 
 /*
 1.ie6不支持min-height,min-width属性
@@ -30,15 +34,20 @@ body {
     margin-top: 20px;*/
 }
 
+
 /*
 默认为PC版本，隐藏.mobile
 */
+
 .mobile {
     display: none;
 }
+
+
 /*
 默认为PC版本，显示.pc
 */
+
 .pc {
     display: block;
 }
@@ -169,20 +178,23 @@ body {
 
 .nav-shell {
     width: 100%;
-    height: 44px;
+    height: 32px;
+    border-bottom: 1px solid #ebebeb;
+    position: relative;
 }
 
 .nav {
-    padding-top: 20px;
     min-width: 530px;
+    height: 32px;
+    line-height: 32px;
     float: right;
+    overflow: hidden;
 }
 
 
 /*去掉li标签前面的点*/
 
 .nav li {
-    list-style-type: none;
     float: left;
 }
 
@@ -205,19 +217,25 @@ body {
 
 .nav .setting {
     display: block;
-    position: relative;
+}
+
+.nav #setting_menu {
+    position: absolute;
+    display: none;
+    top: 23px;
 }
 
 .nav #setting_menu .row {
     height: 10px;
-    width: 80px;
+    width: 20px;
     _margin-bottom: -5px;
-    text-align: center;
+    margin: 0 auto;
+    background: url(../images/triangular_16px_1168028_easyicon.net.ico) no-repeat;
 }
 
 .nav #setting_menu .setting_menu_content {
-    width: 80px;
-    height: 100px;
+    width: 70px;
+    height: 110px;
     border: 1px solid #b6b6b6;
     box-shadow: 5px 5px 2px #aaaaaa;
     -moz-box-shadow: 5px 5px 2px #aaaaaa;
@@ -226,13 +244,17 @@ body {
 }
 
 .nav #setting_menu .menu {
+    display: block;
     text-align: center;
     margin: 0;
+    height: 25px;
+    width: 70px;
 }
 
 .nav #setting_menu .menu a {
     padding-top: 5px;
-    width: 80px;
+    width: 70px;
+    height: 25px;
     display: block;
     padding-bottom: 5px;
 }
@@ -250,61 +272,53 @@ body {
     text-decoration: none;
 }
 
-.nav .setting_menu_hide {
-    display: none;
+
+/**/
+
+.nav .products {
+    display: block;
+    width: 80px;
 }
 
-.nav .setting_menu_show {
-    top: 15px;
-    position: absolute;
-    *left: 0px;
-    /* ie7 */
-    _top: 20px;
-    /* ie6 */
-    _left: 0px;
-    /* ie6 */
-}
 
-#products_a {
+/* #products_a {
+    text-decoration: none;
+} */
+
+.nav .products >a {
+    background-color: #3385ff;
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 13px;
+    height: 33px;
+    width: 80px;
+    text-align: center;
+    line-height: 33px;
     text-decoration: none;
 }
 
-#products_a,
+
+/* #products_a,
 #products_a:visited,
 #products_a:link {
     background-color: #3385ff;
     color: white;
     text-decoration: none;
-    margin-left: 35px;
+    display: block;
+    margin-left: 20px;
     font-weight: bold;
     font-size: 13px;
-    line-height: 23px;
-    padding-left: 4px;
-    padding-right: 4px;
-    display: block;
-}
-
-.nav #products_menu #menu_top {
-    padding-top: 20px;
-    text-align: center;
+    height: 33px;
     width: 80px;
-    padding-bottom: 5px;
-    border-bottom: #f0f0f0 1px solid;
-}
-
-.nav #products_menu #menu_top a {
-    text-decoration: none;
-}
-
-.nav #products_menu .menu {
-    padding-top: 20px;
-    border-bottom: #f0f0f0 1px solid;
     text-align: center;
-    width: 80px;
-    padding-bottom: 5px;
+    line-height: 33px;
 }
+*/
 
-.nav .products_menu_show {
+.nav .products .products_menu {
     position: absolute;
     top: 0;
     right: 0;
@@ -315,10 +329,28 @@ body {
     height: 100%;
     margin-bottom: -9999px;
     padding-bottom: 9999px;
+    display:none;
 }
 
-.nav .products_menu_hide {
-    display: none;
+.nav .products .products_menu .menu_top {
+    /* padding-top: 20px; */
+    text-align: center;
+    width: 80px;
+    padding-bottom: 5px;
+    border-bottom: #f0f0f0 1px solid;
+    display: block;
+}
+
+.nav #products_menu .menu_top a {
+    text-decoration: none;
+}
+
+.nav #products_menu .menu {
+    padding-top: 20px;
+    border-bottom: #f0f0f0 1px solid;
+    text-align: center;
+    width: 80px;
+    padding-bottom: 5px;
 }
 
 .products_menu_a:hover,
@@ -448,4 +480,13 @@ body {
 .qrcode-text b {
     color: #666;
     font-weight: bold;
+}
+
+.cf:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
 }

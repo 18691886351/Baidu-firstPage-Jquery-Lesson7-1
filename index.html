@@ -24,11 +24,10 @@
                     <li><a class="nav_a" href="http://v.baidu.com/">视频</a></li>
                     <li><a class="nav_a" href="http://tieba.baidu.com/">贴吧</a></li>
                     <li><a class="nav_a" href="https://passport.baidu.com/v2/?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2F">登录</a></li>
-                    <li class="setting" onmouseover="settingMenuHideOrdisplay()" onmouseout="settingMenuHideOrdisplay()">
+                    <li id="setting" class="setting">
                         <a class="nav_a" href="#">设置</a>
-                        <div id="setting_menu" class="setting_menu_hide">
+                        <div id="setting_menu" class="setting_menu">
                             <div class="row">
-                                <img src="./static/images/triangular_16px_1168028_easyicon.net.ico" />
                             </div>
                             <div class="setting_menu_content">
                                 <ul>
@@ -41,11 +40,11 @@
                         </div>
                     </li>
                     <!--  -->
-                    <li class="products" onmouseover="productsMenuHideOrdisplay()" onmouseout="productsMenuHideOrdisplay()">
-                        <a id="products_a" href="">更多产品</a>
-                        <div id="products_menu" class="products_menu_hide">
+                    <li class="products" id="products">
+                        <a href="">更多产品</a>
+                        <div id="products_menu" class="products_menu">
                             <ul>
-                                <li id="menu_top"><a href="">更多产品</a></li>
+                                <li class="menu_top"><a href="">更多产品</a></li>
                                 <li class="menu">
                                     <a class="products_menu_a" href="http://music.baidu.com/">
                                         <div id="music_icon"></div>
