@@ -1,0 +1,451 @@
+/*
+为了保证更好的兼容性去掉大部分css3特性
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+
+/*
+1.ie6不支持min-height,min-width属性
+2.behavior: url的路径计算是从html开始的。
+但是针对button,span的hover在ie6下还是不生效
+*/
+
+body {
+    font: 12px arial;
+    min-height: 580px;
+    min-width: 780px;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    behavior: url(./static/js/csshover.htc);
+    /*box-sizing:border-box;
+    margin-top: 20px;*/
+}
+
+/*
+默认为PC版本，隐藏.mobile
+*/
+.mobile {
+    display: none;
+}
+/*
+默认为PC版本，显示.pc
+*/
+.pc {
+    display: block;
+}
+
+
+/*logo，搜索栏*/
+
+.main {
+    margin: 0 auto;
+    width: 650px;
+    padding: 30px;
+}
+
+.main .logo {
+    margin: 0 auto;
+    width: 270px;
+}
+
+.main .logo img {
+    width: 270px;
+    height: 129px;
+}
+
+
+/*搜索栏的外边框*/
+
+.main .text_span {
+    border: 1px solid #b6b6b6;
+    background: #fff;
+    display: inline-block;
+    width: 539px;
+    height: 34px;
+    text-align: left;
+    position: relative;
+    border-right-width: 0px;
+    margin-right: 0px;
+    letter-spacing: -0.5em;
+    margin-top: 22px;
+    float: left;
+}
+
+
+/*搜索栏的外边框 获取焦点*/
+
+.main .text_span_focus {
+    border: 1px solid #4791ff;
+    background: #fff;
+    display: inline-block;
+    width: 539px;
+    height: 34px;
+    text-align: left;
+    position: relative;
+    border-right-width: 0px;
+    margin-right: 0px;
+    letter-spacing: -0.5em;
+    margin-top: 22px;
+    float: left;
+}
+
+.main .text_span:hover {
+    border-color: #999;
+}
+
+.main #input_div #baidu_text {
+    height: 22px;
+    width: 500px;
+    padding: 0;
+    margin: 6px 0 0 7px;
+    outline: 0;
+    border: 0;
+}
+
+.main .camera_onmouseout {
+    position: absolute;
+    right: 11px;
+    top: 30%;
+    height: 16px;
+    width: 18px;
+    background: #fff url(../images/soutu_icons_sample_6a1e1619.png) no-repeat;
+    background-position: -229px 0px;
+    /*background-position 必须出现在background之后*/
+}
+
+.main .camera_onmouseover {
+    position: absolute;
+    right: 11px;
+    top: 30%;
+    height: 16px;
+    width: 18px;
+    background: #fff url(../images/soutu_icons_sample_6a1e1619.png) no-repeat;
+    background-position: -229px -21px;
+    cursor: pointer;
+}
+
+.main .button_span .baidu_bnt_onmouseover {
+    border-bottom: 1px solid #2868c8;
+    -moz-box-shadow: 1px 1px 1px #ccc;
+    -webkit-box-shadow: 1px 1px 1px #ccc;
+    box-shadow: 1px 1px 1px #ccc;
+    behavior: url(./static/js/PIE.htc);
+    background-color: #317ef3;
+    cursor: pointer;
+    color: #fff;
+    height: 36px;
+    width: 100px;
+    letter-spacing: 1px;
+    font-size: 15px;
+    border: 0;
+}
+
+.main .button_span {
+    margin-top: 22px;
+    float: left;
+}
+
+.main .button_span .baidu_bnt_onmouseout {
+    background: #3385ff;
+    cursor: pointer;
+    color: #fff;
+    height: 36px;
+    width: 100px;
+    letter-spacing: 1px;
+    font-size: 15px;
+    border: 0;
+    border-bottom: 1px solid #2d78f4;
+    _margin-left: -1px;
+}
+
+.nav-shell {
+    width: 100%;
+    height: 44px;
+}
+
+.nav {
+    padding-top: 20px;
+    min-width: 530px;
+    float: right;
+}
+
+
+/*去掉li标签前面的点*/
+
+.nav li {
+    list-style-type: none;
+    float: left;
+}
+
+.nav .nav_a {
+    margin-left: 25px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #666;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+.nav .nav_a:visited {
+    color: #666;
+}
+
+.nav .nav_a:hover {
+    color: blue;
+}
+
+.nav .setting {
+    display: block;
+    position: relative;
+}
+
+.nav #setting_menu .row {
+    height: 10px;
+    width: 80px;
+    _margin-bottom: -5px;
+    text-align: center;
+}
+
+.nav #setting_menu .setting_menu_content {
+    width: 80px;
+    height: 100px;
+    border: 1px solid #b6b6b6;
+    box-shadow: 5px 5px 2px #aaaaaa;
+    -moz-box-shadow: 5px 5px 2px #aaaaaa;
+    -webkit-box-shadow: 5px 5px 2px #aaaaaa;
+    text-align: center;
+}
+
+.nav #setting_menu .menu {
+    text-align: center;
+    margin: 0;
+}
+
+.nav #setting_menu .menu a {
+    padding-top: 5px;
+    width: 80px;
+    display: block;
+    padding-bottom: 5px;
+}
+
+.nav #setting_menu .menu a:hover {
+    background-color: #3385ff;
+    color: white;
+}
+
+.nav #setting_menu .menu a:visited {
+    color: black;
+}
+
+.nav #setting_menu .menu a {
+    text-decoration: none;
+}
+
+.nav .setting_menu_hide {
+    display: none;
+}
+
+.nav .setting_menu_show {
+    top: 15px;
+    position: absolute;
+    *left: 0px;
+    /* ie7 */
+    _top: 20px;
+    /* ie6 */
+    _left: 0px;
+    /* ie6 */
+}
+
+#products_a {
+    text-decoration: none;
+}
+
+#products_a,
+#products_a:visited,
+#products_a:link {
+    background-color: #3385ff;
+    color: white;
+    text-decoration: none;
+    margin-left: 35px;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 23px;
+    padding-left: 4px;
+    padding-right: 4px;
+    display: block;
+}
+
+.nav #products_menu #menu_top {
+    padding-top: 20px;
+    text-align: center;
+    width: 80px;
+    padding-bottom: 5px;
+    border-bottom: #f0f0f0 1px solid;
+}
+
+.nav #products_menu #menu_top a {
+    text-decoration: none;
+}
+
+.nav #products_menu .menu {
+    padding-top: 20px;
+    border-bottom: #f0f0f0 1px solid;
+    text-align: center;
+    width: 80px;
+    padding-bottom: 5px;
+}
+
+.nav .products_menu_show {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    background-color: #f9f9f9;
+    border-left: 1px solid #b6b6b6;
+    /* height: 100vh; */
+    height: 100%;
+    margin-bottom: -9999px;
+    padding-bottom: 9999px;
+}
+
+.nav .products_menu_hide {
+    display: none;
+}
+
+.products_menu_a:hover,
+.products_menu_a:visited,
+.products_menu_a:link {
+    color: #666;
+    text-decoration: underline;
+}
+
+#music_icon {
+    width: 40px;
+    height: 36px;
+    background: url(../images/bdbri_icons_2e35e84b.png) no-repeat;
+    background-position: -72px 0;
+    margin: 0 auto;
+}
+
+#pic_icon {
+    width: 36px;
+    height: 36px;
+    background: url(../images/bdbri_icons_2e35e84b.png) no-repeat;
+    background-position: -112px 0;
+    margin: 0 auto;
+}
+
+#zhidao_icon {
+    width: 36px;
+    height: 36px;
+    background: url(../images/bdbri_icons_2e35e84b.png) no-repeat;
+    background-position: -36px 0;
+    margin: 0 auto;
+}
+
+#wenku_icon {
+    width: 36px;
+    height: 36px;
+    background: url(../images/bdbri_icons_2e35e84b.png) no-repeat;
+    background-position: -148px 0;
+    margin: 0 auto;
+}
+
+#tuiguang_icon {
+    width: 46px;
+    height: 36px;
+    background: url(../images/bdbri_icons_2e35e84b.png) no-repeat;
+    background-position: -220px 0;
+    margin: 0 auto;
+}
+
+.foot {
+    width: 100%;
+    position: absolute;
+    bottom: 43px;
+}
+
+.foot-warp {
+    margin: 0 auto;
+    color: #999;
+    width: 700px;
+    min-width: 700px;
+}
+
+.foot a:link {
+    color: #999;
+}
+
+.foot a:visited {
+    color: #999;
+}
+
+.qrcode-img {
+    float: left;
+    width: 60px;
+    height: 60px;
+    background: url(../images/zbios_62c636fe.png) 0 0 no-repeat;
+}
+
+.qrcode-img2 {
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin-left: 20px;
+    background: url(../images/nuomi_510f7472.png) 0 0 no-repeat;
+}
+
+.qrcode-text {
+    float: left;
+    line-height: 23px;
+}
+
+.about span {
+    margin-left: 62px;
+}
+
+.right {
+    margin-left: 62px;
+    float: left;
+}
+
+.help {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.icrlogo {
+    width: 14px;
+    height: 17px;
+    display: inline-block;
+    background: url(../images/icons_0e814c16.png) no-repeat;
+    overflow: hidden;
+    background-position: -600px -96px;
+    position: relative;
+}
+
+.c-icon-jgwablo {
+    width: 14px;
+    height: 17px;
+    display: inline-block;
+    background: url(../images/icons_0e814c16.png) no-repeat;
+    overflow: hidden;
+    background-position: -623px -96px;
+    position: relative;
+    top: 3px;
+    margin-right: 6px;
+}
+
+.qrcode-text b {
+    color: #666;
+    font-weight: bold;
+}
