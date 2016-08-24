@@ -13,6 +13,9 @@
 
 <body>
     <div class="pc">
+        <!--换肤模块-->
+        <div id="skiner" class="skiner">
+        </div>
         <!--导航以及导航菜单-->
         <div class="nav-shell">
             <div class="nav">
@@ -87,12 +90,34 @@
                     </li>
                 </ul>
             </div>
-            <div class="weather">
-                
+            <div class="tools">
+                <div class="show-weather">
+                    <div class="city">
+                        <span class="city-name">西安：</span>
+                    </div>
+                    <div class="weather">
+                        <span class="weather-icon"> <i class="iconfont">&#xe611;</i></span>
+                    </div>
+                    <div class="temp">
+                        <span class="temp-num">34°C</span>
+                    </div>
+                    <div class="pollution">
+                        <span class="pollution-name">良</span>
+                        <span class="pollution-num">85</span>
+                        <span class="show-vertical">|</span>
+                    </div>
+                </div>
+                <div class="utility">
+                    <div class="box">
+                        <a target="_blank" href="http://vip.baidu.com/act/xuyuan"><span>宝箱</span></a>
+                    </div>
+                    <div class="skin"><span>换肤</span></div>
+                    <div class="message"><span>消息</span></div>
+                </div>
             </div>
-        </div> 
+        </div>
         <!--主页图片以及搜索输入框-->
-        <div class="main">
+        <div class="main cf">
             <div class="logo">
                 <img src="./static/images/bd_logo1.png">
             </div>
@@ -107,6 +132,23 @@
                     <input onmouseover="baiduBntOnmouseoverOrOut()" onmouseout="baiduBntOnmouseoverOrOut()" id="baidu_bnt" class="baidu_bnt_onmouseout" type="submit" value="百度一下" />
                 </div>
             </form>
+        </div>
+        <!--自定义板块-->
+        <div class="custom">
+            <div class="custom-nav cf">
+                <div class="menu first">
+                    <span class="icon"><i class="iconfont2">&#xe601;</i></span>
+                    <span class="name">我的关注</span>
+                </div>
+                <div class="menu" name="video"><span>视频</span></div>
+                <div class="menu" name="recommend"><span>推荐</span></div>
+                <div class="menu" name="recommend"><span>导航</span></div>
+                <div class="menu" name="stroy"><span>小说</span></div>
+                <div class="menu" name="physical-education"><span>体育</span></div>
+                <div class="menu" name="shopping"><span>购物</span></div>
+                <div class="menu last" name="setting"><span><i class="iconfont">&#xe612;</i></span></div>
+            </div>
+            <div class="custom-main"></div>
         </div>
         <!--二维码以及版权-->
         <div class="foot">
