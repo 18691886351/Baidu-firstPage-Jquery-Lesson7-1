@@ -336,7 +336,6 @@ body {
     /* padding-top: 20px; */
     text-align: center;
     width: 80px;
-    padding-bottom: 5px;
     border-bottom: #f0f0f0 1px solid;
     display: block;
 }
@@ -471,6 +470,7 @@ body {
 
 .custom .custom-nav {
     border-bottom: 1px solid #e9e9e9;
+    height: 40px;
 }
 
 .custom .custom-nav .menu {
@@ -478,6 +478,7 @@ body {
     width: 80px;
     font-size: 14px;
     text-align: center;
+    cursor: pointer;
 }
 
 .custom .custom-nav .menu:hover {
@@ -510,10 +511,145 @@ body {
     line-height: 40px;
 }
 
-.foot {
-    width: 100%;
+.custom .custom-main .myAttention {
+    width: 860px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.custom .custom-main .myAttention .title .text {
+    line-height: 30px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: 2px;
+}
+
+.custom .custom-main .myAttention .title .arrow {
+    line-height: 30px;
+    height: 30px;
+}
+
+.custom .custom-main .myAttention .content .row {
+    border-top: 1px solid #e9e9e9;
+}
+
+.custom .custom-main .myAttention .content .row .item {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    width: 160px;
+    float: left;
+    color: #333;
+}
+
+.custom .custom-main .myAttention .content .row .item:visited {
+    color: #333;
+}
+
+.custom .custom-main .myAttention .content .row .item img {
+    height: 16px;
+    width: 16px;
+    display: block;
+    float: left;
+    margin-top: 12px;
+    margin-right: 5px;
+}
+
+.custom .custom-main .myAttention .content .row .item .name {
+    display: block;
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.custom .custom-main .video {
+    width: 860px;
+    margin: 0 auto;
+}
+
+.custom .custom-main .video .item {
+    float: left;
+    width: 195px;
+    height: 320px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    overflow: hidden;
+}
+
+.custom .custom-main .video .item .pic-show {
+    position: relative;
+}
+
+.custom .custom-main .video .item .pic-show img {
+    width: 195px;
+    height: 267px;
+}
+
+.custom .custom-main .video .item .pic-show .min {
     position: absolute;
-    bottom: 43px;
+    bottom: 5px;
+    right: 5px;
+    color: white;
+}
+
+.custom .custom-main .video .item .text-show a {
+    display: block;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 10px;
+    max-width: 195px;
+    display: inline-block;
+    text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #333;
+}
+
+.custom .custom-main .video .item .text-show a:visited {
+    color: #333;
+}
+
+.custom .custom-main .video .item .text-show .score .score-star {
+    display: inline-block;
+    background-repeat: repeat-x;
+    height: 13px;
+    width: 65px;
+    background-image: url(https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/mantpl/img/video/star_592adb7e.png);
+    _background-image: url(https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/mantpl/img/video/star_592adb7e.png);
+    background-repeat: repeat-x;
+    vertical-align: middle;
+    margin-bottom: 4px;
+    position: relative;
+    margin-right: 5px;
+}
+
+.custom .custom-main .video .item .text-show .score .score-star .star-active {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    height: 13px;
+    width: 13px;
+    background-image: url(https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/mantpl/img/video/star_592adb7e.png);
+    _background-image: url(https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/mantpl/img/video/star_592adb7e.png);
+    background-repeat: repeat-x;
+    background-position: 0 -13px;
+    vertical-align: middle;
+    margin-bottom: 4px;
+}
+
+.custom .custom-main .video .item .text-show .score .sorce-num {
+    font-size: 14px;
+}
+
+.foot {
+    margin-top: 20px;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .foot-warp {
@@ -615,6 +751,16 @@ body {
     font-family: "iconfont" !important;
     font-size: 16px;
     color: white;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.iconfont3 {
+    font-family: "iconfont" !important;
+    font-size: 12px;
+    color: black;
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -webkit-text-stroke-width: 0.2px;
