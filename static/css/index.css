@@ -504,6 +504,7 @@ body {
 
 .custom .custom-nav .menu.last {
     float: right;
+    height:40px;
 }
 
 .custom .custom-nav .menu span {
@@ -577,16 +578,36 @@ body {
     height: 320px;
     margin-bottom: 25px;
     margin-top: 25px;
+    margin-right: 15px;
     overflow: hidden;
 }
 
 .custom .custom-main .video .item .pic-show {
     position: relative;
+    height: 270px;
 }
 
-.custom .custom-main .video .item .pic-show img {
+.custom .custom-main .video .item .pic-show.small {
+    height: 101px;
+}
+
+.custom .custom-main .video .item .pic-show a {
+    display: block;
+    height: 270px;
+}
+
+.custom .custom-main .video .item .pic-show.small a {
+    height: 101px;
+}
+
+.custom .custom-main .video .item .pic-show .big {
     width: 195px;
-    height: 267px;
+    height: 270px;
+}
+
+.custom .custom-main .video .item .pic-show .small {
+    width: 195px;
+    height: 101px;
 }
 
 .custom .custom-main .video .item .pic-show .min {
@@ -594,6 +615,31 @@ body {
     bottom: 5px;
     right: 5px;
     color: white;
+}
+
+.custom .custom-main .video .item .pic-show .tag {
+    position: absolute;
+    top: 0;
+    height: 42px;
+    width: 42px;
+    right: 0;
+    background-image: url(https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/mantpl/img/video/video_corner_bce72425.png);
+}
+
+.custom .custom-main .video .item .pic-show .tag.cartoon {
+    background-position: -126px 0;
+}
+
+.custom .custom-main .video .item .pic-show .tag.teleplay {
+    background-position: -84px 0;
+}
+
+.custom .custom-main .video .item .text-show {
+    background: #F5F5F5;
+    border: 1px solid #F1F1F1;
+    border-top: none;
+    height: 44px;
+    overflow: hidden;
 }
 
 .custom .custom-main .video .item .text-show a {
@@ -640,6 +686,10 @@ body {
     background-position: 0 -13px;
     vertical-align: middle;
     margin-bottom: 4px;
+}
+
+.custom .custom-main .video .item .child-item:first-child {
+    margin-bottom: 24px;
 }
 
 .custom .custom-main .video .item .text-show .score .sorce-num {
