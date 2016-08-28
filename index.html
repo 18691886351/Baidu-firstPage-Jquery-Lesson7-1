@@ -123,13 +123,13 @@
             </div>
             <form action="https://www.baidu.com/s">
                 <div id="input_div" class="text_span">
-                    <input id="baidu_text" type="text" onfocus="changeInputParentBorderColor()" onblur="changeInputParentBorderColor()" name="wd" />
+                    <input id="baidu_text" type="text" name="wd" />
                     <input type="hidden" name="cl" value="3" />
                     <input type="hidden" name="ie" value="utf-8">
-                    <span id="camera" onmouseover="cameramouseoverOrOut()" onmouseout="cameramouseoverOrOut()" class="camera_onmouseout"></span>
+                    <span id="camera" class="camera camera_onmouseout"></span>
                 </div>
                 <div class="button_span">
-                    <input onmouseover="baiduBntOnmouseoverOrOut()" onmouseout="baiduBntOnmouseoverOrOut()" id="baidu_bnt" class="baidu_bnt_onmouseout" type="submit" value="百度一下" />
+                    <input id="baidu_bnt" class="baidu_bnt baidu_bnt_onmouseout" type="submit" value="百度一下" />
                 </div>
             </form>
         </div>
@@ -140,16 +140,16 @@
                     <span class="icon"><i class="iconfont2">&#xe601;</i></span>
                     <span class="name">我的关注</span>
                 </div>
-                <div class="menu" name="video"><span>视频</span></div>
-                <div class="menu" name="recommend"><span>推荐</span></div>
-                <div class="menu" name="navigation"><span>导航</span></div>
-                <div class="menu" name="stroy"><span>小说</span></div>
-                <div class="menu" name="physical-education"><span>体育</span></div>
-                <div class="menu" name="shopping"><span>购物</span></div>
-                <div class="menu last" name="setting"><span><i class="iconfont">&#xe612;</i></span></div>
+                <div class="menu" name="video"><span class="name">视频</span></div>
+                <div class="menu" name="recommend"><span class="name">推荐</span></div>
+                <div class="menu" name="navigation"><span class="name">导航</span></div>
+                <div class="menu" name="stroy"><span class="name">小说</span></div>
+                <div class="menu" name="physical-education"><span class="name" >体育</span></div>
+                <div class="menu" name="shopping"><span class="name">购物</span></div>
+                <div class="menu-last" name="setting"><span><i class="iconfont">&#xe612;</i></span></div>
             </div>
             <div class="custom-main cf">
-                <div class="myAttention" style="display:none">
+                <div id="myAttention" class="myAttention">
                     <div class="title">
                         <span class="arrow"><i class="iconfont3">&#xe614;</i></span>
                         <span class="text">我的导航</span>
@@ -223,7 +223,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="video" style="display:none">
+                <div id="video" class="video" style="display:none">
                     <div class="item">
                         <div class="pic-show">
                             <a href="http://www.iqiyi.com/v_19rrkqlmpw.html?vfm=2008_aldbd&amp;fc=828fb30b722f3164&amp;fv=p_02_01" hidefocus="" target="_blank" title="喜马拉雅天梯" data-click="LOG_LINK">
@@ -309,7 +309,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="recommend">
+                <div id="recommend" class="recommend cf" style="display:none">
                     <div class="news-list">
                         <div class="tips cf">
                             <div class="left-line"></div>
@@ -344,12 +344,29 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="reco-item">
+                            <div class="reco-pic">
+                                <a href="http://finance.ifeng.com/a/20160827/14817555_0.shtml" title="美国警犬被留巡逻车内36小时热死 警察遭开除">
+                                    <img src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2238241642,1493996893&fm=80" alt="">
+                                </a>
+                            </div>
+                            <div class="reco-text">
+                                <a class="simple-describe" href="http://finance.ifeng.com/a/20160827/14817555_0.shtml">美国警犬被留巡逻车内36小时热死 警察遭开除</a>
+                                <div class="other-describe">
+                                    <span><a href="http://finance.ifeng.com" target="_blank" data-src="1" data-click="LOG_LINK">凤凰财经</a></span>
+                                    <span>08-27 15:20</span>
+                                    <span class="hotpoint">热点</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="realtime-hot">
-                        <div class="title">
-                            <span>实时热点</span>
+                        <div class="title cf">
+                            <a class="realtime-hot-text" href="http://top.baidu.com/?fr=mhd_card">
+                                <span>实时热点</span>
+                            </a>
                             <a href="#" class="hot-refresh">
-                                <span class="hot-refresh-icon"></span>
+                                <span class="hot-refresh-icon"><i class="iconfont">&#xe615;</i></span>
                                 <span class="hot-refresh-text">换一换</span>
                             </a>
                         </div>
