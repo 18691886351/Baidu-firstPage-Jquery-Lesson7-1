@@ -119,4 +119,55 @@ $(document).ready(function() {
         $(this).children(".name").css({ "color": "white", "font-weight": "bold" });
         $(this).siblings().children(".name").css({ "color": "black", "font-weight": "normal" });
     })
+
+
+    var settOpacity = function(e) {
+        var _Y = $("#s_bg_ajust_bar").offset().top;
+        var _X = $("#s_bg_ajust_bar").offset().left;
+        var _mouseX = e.pageX;
+        var _width = $("#s_bg_ajust_bar").width();
+        var _btnwidth = $("#s_bg_ajust_btn").width();
+        var _offset = 0;
+        if (_mouseX <= _X) {
+            _offset = 0;
+        } else if ((_mouseX - _X) < (_btnwidth / 2)) {
+            _offset = 0;
+        } else {
+            _offset = _mouseX - _X - (_btnwidth / 2);
+        }
+        //alert("mouseX=" + _mouseX + ",X=" + _X + ",Y=" + _Y);
+        /*      
+        alert("mouseX=" + mouseX + ",X=" + X + ",Y=" + Y);
+        alert(mouseX - X);
+        */
+        $("#s_bg_ajust_btn").css({ "transform": "translate3d(" + _offset + "px,0,0)" });
+        //alert("_offset=" + _offset + ",_width=" + _width + ",_width-_btnwidth=" + (_width - _btnwidth) + ",_btnwidth=" + _btnwidth);
+        var _percent = Math.abs(((_offset / (_width - _btnwidth)) * 100).toFixed(0));
+        if (_percent > 0) _percent = _percent + 5 - _percent % 5;
+        if (_percent > 100) _percent = 100;
+        //alert("_percent=" + _percent);
+        $("#s_bg_ajust_txt").text(_percent + "%");
+    }
+
+    $("#s_bg_ajust_bar").click(settOpacity);
+    /*实现拖动效果*/
+    var isMouseDown = 0;
+    $("#s_bg_ajust_btn").mousedown(function() {
+        isMouseDown = 1;
+    });
+
+    $("#s_bg_ajust_btn").mouseup(function() {
+        isMouseDown = 0;
+    });
+
+    $("#s_bg_ajust_btn").mousemove(function(event) {
+        var _X = $("#s_bg_ajust_bar").offset().left + $("#s_bg_ajust_bar").width();
+        //alert("event.pageX =" + event.pageX + ",_X=" + _X);
+        if (event.pageX >= _X) {
+            return;
+        }
+        if (isMouseDown == 1) {
+            settOpacity(event);
+        }
+    })
 })

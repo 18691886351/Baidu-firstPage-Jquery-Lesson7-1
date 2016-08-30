@@ -73,6 +73,112 @@ body {
 }
 
 
+/*换肤*/
+
+.skiner {
+    border: 1px solid #ccc;
+}
+
+.skiner .skiner-header {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.skiner .skiner-header .skin-nav .skin-item {
+    display: block;
+    float: left;
+    height: 45px;
+    line-height: 45px;
+    padding: 0px 8px 0 8px;
+}
+
+.skiner .skiner-header .skin-nav .skin-item.first {
+    background-color: #389cff;
+    color: white;
+}
+
+.skiner .skiner-header .skin-nav .skin-item:hover {
+    background-color: #389cff;
+    color: white;
+}
+
+.skiner .skiner-header .skin-nav .nav-vertial .nav-vertial-border {
+    width: 1px;
+    background: #dedede;
+    height: 15px;
+    float: left;
+    margin-top: 15px;
+}
+
+.skiner .skiner-header .skin-setting {
+    float: right;
+    height: 45px;
+    line-height: 45px;
+}
+
+.skiner .skiner-header .skin-setting > div {
+    float: left;
+}
+
+.skiner .skiner-header .skin-setting span {
+    float: left;
+    display: block;
+}
+
+.skiner .skiner-header .skin-setting .skin-opacity-set .bg-alphaBarTitle {
+    margin-right: 10px;
+}
+
+.skiner .skiner-header .skin-setting .skin-opacity-set .bg-alphaBar {
+    position: relative;
+    cursor: pointer;
+    width: 80px;
+    height: 4px;
+    border-top: 1px solid #e1e1e1;
+    background: #f2f2f2;
+    display: inline-block;
+    margin-top: 22px;
+}
+
+.skiner .skiner-header .skin-setting .skin-opacity-set .bg-alphaBarMoveBtn {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    display: block;
+    border: 1px solid #e1e1e1;
+    z-index: 10;
+    top: -8px;
+    background-color: white;
+}
+
+.skiner .skiner-header .skin-setting .skin-opacity-set .bg-alphaBarOpacity {
+    position: absolute;
+    display: block;
+    top: -14px;
+    font-size: 11px;
+    display: block;
+    width: 28px;
+    height: 14px;
+    line-height: 14px;
+}
+
+.skiner .skiner-header .skin-setting .skin-no-bg {
+    margin-left: 30px;
+}
+
+.skiner .skiner-header .skin-up {
+    margin-left:50px;
+}
+
+.skiner .skiner-header .skin-up .bg i {
+    color: #0079f5 !important;
+}
+
+.skiner .skiner-header .skin-up .title {
+    color: #0079f5;
+}
+
+
 /*搜索栏的外边框*/
 
 .main .text_span {
@@ -487,7 +593,7 @@ body {
 .custom .custom-nav .menu-last {
     float: right;
     height: 40px;
-    line-height:40px;
+    line-height: 40px;
     width: 80px;
     font-size: 14px;
     text-align: center;
