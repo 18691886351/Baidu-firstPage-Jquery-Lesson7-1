@@ -12,63 +12,297 @@
 </head>
 
 <body>
-    <div class="pc">
+    <div class="pc skin-container cf">
         <!--换肤模块-->
         <div id="skiner" class="skiner cf">
             <div class="skiner-header cf">
-                <ul class="skin-nav">
-                    <li class="skin-item first"><span class="skinnav-nav-name">热门</span></li>
-                    <li class="skin-item"><span class="skinnav-nav-name">游戏</span><span class="skinnav-new-icon"></span></li>
-                    <li class="skin-item"><span class="skinnav-nav-name">卡通</span><span class="skinnav-new-icon"></span></li>
-                    <li class="skin-item"><span class="skinnav-nav-name">女神降临</span><span class="skinnav-new-icon"></span></li>
-                    <li class="skin-item"><span class="skinnav-nav-name">明星</span><span class="skinnav-new-icon"></span></li>
-                    <li class="skin-item"><span class="skinnav-nav-name">风景</span></li>
-                    <li class="skin-item"><span class="skinnav-nav-name">简约</span></li>
-                    <li class="skin-item"><span class="skinnav-nav-name">小清新</span></li>
-                    <li class="nav-vertial">
-                        <div class="nav-vertial-border"></div>
-                    </li>
-                    <li class="skin-item"><span class="skinnav-nav-name">自定义</span></li>
-                    <li class="skin-item"><span class="skinnav-nav-name">最近使用</span></li>
-                </ul>
-                <div class="skin-setting">
-                    <div class="skin-opacity-set" id="skin_opacity_set">
-                        <span class="bg-alphaBarTitle">背景透明度</span>
-                        <span class="bg-alphaBar" id="s_bg_ajust_bar">
+                <div class="skin-nav">
+                    <ul>
+                        <li class="skin-item first"><span class="skinnav-nav-name">热门</span></li>
+                        <li class="skin-item"><span class="skinnav-nav-name">游戏</span><span class="skinnav-new-icon"></span></li>
+                        <li class="skin-item"><span class="skinnav-nav-name">卡通</span><span class="skinnav-new-icon"></span></li>
+                        <li class="skin-item"><span class="skinnav-nav-name">女神降临</span><span class="skinnav-new-icon"></span></li>
+                        <li class="skin-item"><span class="skinnav-nav-name">明星</span><span class="skinnav-new-icon"></span></li>
+                        <li class="skin-item"><span class="skinnav-nav-name">风景</span></li>
+                        <li class="skin-item"><span class="skinnav-nav-name">简约</span></li>
+                        <li class="skin-item"><span class="skinnav-nav-name">小清新</span></li>
+                        <li class="nav-vertial">
+                            <div class="nav-vertial-border"></div>
+                        </li>
+                        <li class="skin-item"><span class="skinnav-nav-name">自定义</span></li>
+                        <li class="skin-item"><span class="skinnav-nav-name">最近使用</span></li>
+                    </ul>
+                    <div class="skin-setting">
+                        <div class="skin-opacity-set" id="skin_opacity_set">
+                            <span class="bg-alphaBarTitle">背景透明度</span>
+                            <span class="bg-alphaBar" id="s_bg_ajust_bar">
                             <span class="bg-alphaBarMoveBtn" id="s_bg_ajust_btn">
                                 <em class="bg-alphaBarOpacity" id="s_bg_ajust_txt">0%</em>
                             </span>
-                        </span>
-                    </div>
-                    <div class="skin-no-bg">
-                        <span class="skin-no-bg-icon"><i class="iconfont3">&#xe617;</i></span>
-                        <span class="skinset-title">不使用换肤</span>
-                    </div>
-                    <div class="skin-up">
-                        <span class="bg"><i class="iconfont3">&#xe616;</i></span>
-                        <span class="title">收起</span>
+                            </span>
+                        </div>
+                        <div class="skin-no-bg">
+                            <span class="skin-no-bg-icon"><i class="iconfont3">&#xe617;</i></span>
+                            <span class="skinset-title">不使用换肤</span>
+                        </div>
+                        <div class="skin-up">
+                            <span class="bg"><i class="iconfont3">&#xe616;</i></span>
+                            <span id="skin-close-btn" class="title">收起</span>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="skiner-content">
-                
+                <div class="skiner-content-choose">
+                    <ul class="skin-img-list">
+                        <li class="skin-img-item big-img-li page-0 pos-0" data-index="817">
+                            <img class="skin-img-item-img" src="https://ss2.bdstatic.com/kfoZeXSm1A5BphGlnYG/skin_plus/817.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:环球影业</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-0 pos-1" data-index="818">
+                            <img class="skin-img-item-img" src="https://ss3.bdstatic.com/lPoZeXSm1A5BphGlnYG/skin_plus/818.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:环球影业</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-0 pos-2" data-index="819">
+                            <img class="skin-img-item-img" src="https://ss0.bdstatic.com/l4oZeXSm1A5BphGlnYG/skin_plus/819.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:派拉蒙影业</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-0 pos-3" data-index="820">
+                            <img class="skin-img-item-img" src="https://ss1.bdstatic.com/lvoZeXSm1A5BphGlnYG/skin_plus/820.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:派拉蒙影业</p>
+                            <div class="skin-img-item-new skin-bg-icon "></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-0 pos-4" data-index="821">
+                            <img class="skin-img-item-img" src="https://ss2.bdstatic.com/lfoZeXSm1A5BphGlnYG/skin_plus/821.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:黄子韬工作室</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-0 pos-5" data-index="805">
+                            <img class="skin-img-item-img" src="https://ss2.bdstatic.com/lfoZeXSm1A5BphGlnYG/skin_plus/805.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:爱奇艺</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-0 pos-6" data-index="806">
+                            <img class="skin-img-item-img" src="https://ss3.bdstatic.com/iPoZeXSm1A5BphGlnYG/skin_plus/806.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:爱奇艺</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-0 pos-7" data-index="807">
+                            <img class="skin-img-item-img" src="https://ss0.bdstatic.com/k4oZeXSm1A5BphGlnYG/skin_plus/807.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:爱奇艺</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-0 pos-8 big-img-li" data-index="808">
+                            <img class="skin-img-item-img" src="https://ss1.bdstatic.com/kvoZeXSm1A5BphGlnYG/skin_plus/808.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:世纪长龙</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-0 pos-9" data-index="809">
+                            <img class="skin-img-item-img" src="https://ss2.bdstatic.com/kfoZeXSm1A5BphGlnYG/skin_plus/809.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:世纪长龙</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-0 pos-10" data-index="810">
+                            <img class="skin-img-item-img" src="https://ss3.bdstatic.com/lPoZeXSm1A5BphGlnYG/skin_plus/810.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:世纪长龙</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-0 pos-11" data-index="811">
+                            <img class="skin-img-item-img" src="https://ss0.bdstatic.com/l4oZeXSm1A5BphGlnYG/skin_plus/811.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:嘉映影业</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-1 pos-0 big-img-li" data-index="812">
+                            <img class="skin-img-item-img" src="https://ss1.bdstatic.com/lvoZeXSm1A5BphGlnYG/skin_plus/812.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:林心如工作室</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-1 pos-1" data-index="813">
+                            <img class="skin-img-item-img" src="https://ss2.bdstatic.com/lfoZeXSm1A5BphGlnYG/skin_plus/813.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:环球影业</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-1 pos-2" data-index="814">
+                            <img class="skin-img-item-img" src="https://ss3.bdstatic.com/iPoZeXSm1A5BphGlnYG/skin_plus/814.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:环球影业</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-1 pos-3" data-index="815">
+                            <img class="skin-img-item-img" src="https://ss0.bdstatic.com/k4oZeXSm1A5BphGlnYG/skin_plus/815.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:环球影业</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-1 pos-4" data-index="816">
+                            <img class="skin-img-item-img" src="https://ss1.bdstatic.com/kvoZeXSm1A5BphGlnYG/skin_plus/816.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:环球影业</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-1 pos-5" data-index="796">
+                            <img class="skin-img-item-img" src="https://ss1.bdstatic.com/lvoZeXSm1A5BphGlnYG/skin_plus/796.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:欢瑞世纪</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-1 pos-6" data-index="797">
+                            <img class="skin-img-item-img" src="https://ss2.bdstatic.com/lfoZeXSm1A5BphGlnYG/skin_plus/797.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:欢瑞世纪</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-1 pos-7" data-index="798">
+                            <img class="skin-img-item-img" src="https://ss3.bdstatic.com/iPoZeXSm1A5BphGlnYG/skin_plus/798.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:欢瑞世纪</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-1 pos-8 big-img-li" data-index="799">
+                            <img class="skin-img-item-img" src="https://ss0.bdstatic.com/k4oZeXSm1A5BphGlnYG/skin_plus/799.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:欢瑞世纪</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-1 pos-9" data-index="799">
+                            <img class="skin-img-item-img" src="https://ss1.bdstatic.com/kvoZeXSm1A5BphGlnYG/skin_plus/800.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:欢瑞世纪</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-1 pos-10" data-index="801">
+                            <img class="skin-img-item-img" src="https://ss2.bdstatic.com/kfoZeXSm1A5BphGlnYG/skin_plus/801.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:欢瑞世纪</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-1 pos-11" data-index="802">
+                            <img class="skin-img-item-img" src="https://ss3.bdstatic.com/lPoZeXSm1A5BphGlnYG/skin_plus/802.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:恒业影业</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-2 pos-0 big-img-li" data-index="803">
+                            <img class="skin-img-item-img" data-src="https://ss0.bdstatic.com/l4oZeXSm1A5BphGlnYG/skin_plus/803.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:周迅工作室</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-2 pos-1" data-index="804">
+                            <img class="skin-img-item-img" data-src="https://ss1.bdstatic.com/lvoZeXSm1A5BphGlnYG/skin_plus/804.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:华映传媒</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-2 pos-2" data-index="776">
+                            <img class="skin-img-item-img" data-src="https://ss1.bdstatic.com/kvoZeXSm1A5BphGlnYG/skin_plus/776.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:光线影业</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-2 pos-3" data-index="777">
+                            <img class="skin-img-item-img" data-src="https://ss2.bdstatic.com/kfoZeXSm1A5BphGlnYG/skin_plus/777.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:光线影业</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-2 pos-4" data-index="778">
+                            <img class="skin-img-item-img" data-src="https://ss3.bdstatic.com/lPoZeXSm1A5BphGlnYG/skin_plus/778.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:光线影业</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-2 pos-5" data-index="781">
+                            <img class="skin-img-item-img" data-src="https://ss2.bdstatic.com/lfoZeXSm1A5BphGlnYG/skin_plus/781.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:光线影业</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                        <li class="skin-img-item page-2 pos-6" data-index="784">
+                            <img class="skin-img-item-img" data-src="https://ss1.bdstatic.com/kvoZeXSm1A5BphGlnYG/skin_plus/784.jpg?2">
+                            <div class="skin-img-shadow"></div>
+                            <p class="skin-img-item-writer">摄影:枫海影业</p>
+                            <div class="skin-img-item-new skin-bg-icon"></div>
+                            <div class="skin-img-item-choose skin-bg-icon skin-bg-png24-icon"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="skin-preview-shell">
+                    <div id="preview-view" class="preview-view">
+                        <div class="preview-view-container">
+                            <img id="s_skin_preview_skin" class="preview-skin-view" src="https://ss2.bdstatic.com/kfoZeXSm1A5BphGlnYG/skin_plus/817.jpg?2">
+                            <img id="s_skin_preview_defined" class="preview-defined-view">
+                        </div>
+                        <div class="preview-pageUI"></div>
+                    </div>
+                    <p class="preview-title">背景皮肤效果预览</p>
+                </div>
             </div>
         </div>
         <!--导航以及导航菜单-->
         <div class="nav-shell">
             <div class="nav">
                 <ul>
-                    <li><a class="nav_a" href="http://www.nuomi.com/?cid=002540">糯米</a></li>
-                    <li><a class="nav_a" href="http://news.baidu.com/">新闻</a></li>
-                    <li><a class="nav_a" href="http://www.hao123.com/">hao123</a></li>
-                    <li><a class="nav_a" href="http://map.baidu.com/">地图</a></li>
-                    <li><a class="nav_a" href="http://v.baidu.com/">视频</a></li>
-                    <li><a class="nav_a" href="http://tieba.baidu.com/">贴吧</a></li>
-                    <li><a class="nav_a" href="https://passport.baidu.com/v2/?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2F">登录</a></li>
+                    <li><a class="nav_a skin-font-white" href="http://www.nuomi.com/?cid=002540">糯米</a></li>
+                    <li><a class="nav_a skin-font-white" href="http://news.baidu.com/">新闻</a></li>
+                    <li><a class="nav_a skin-font-white" href="http://www.hao123.com/">hao123</a></li>
+                    <li><a class="nav_a skin-font-white" href="http://map.baidu.com/">地图</a></li>
+                    <li><a class="nav_a skin-font-white" href="http://v.baidu.com/">视频</a></li>
+                    <li><a class="nav_a skin-font-white" href="http://tieba.baidu.com/">贴吧</a></li>
+                    <li><a class="nav_a skin-font-white" href="https://passport.baidu.com/v2/?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2F">登录</a></li>
                     <li id="setting" class="setting">
-                        <a class="nav_a" href="#">设置</a>
+                        <a class="nav_a skin-font-white" href="#">设置</a>
                         <div id="setting_menu" class="setting_menu">
-                            <div class="row">
+                            <div class="bdnuarrow">
+                                <em></em>
+                                <i></i>
                             </div>
                             <div class="setting_menu_content">
                                 <ul>
@@ -131,33 +365,33 @@
             <div class="tools">
                 <div class="show-weather">
                     <div class="city">
-                        <span class="city-name">西安：</span>
+                        <span class="city-name skin-font-white">西安：</span>
                     </div>
                     <div class="weather">
-                        <span class="weather-icon"> <i class="iconfont">&#xe611;</i></span>
+                        <span class="weather-icon"> <i class="iconfont skin-font-white">&#xe611;</i></span>
                     </div>
                     <div class="temp">
-                        <span class="temp-num">34°C</span>
+                        <span class="temp-num skin-font-white">34°C</span>
                     </div>
                     <div class="pollution">
                         <span class="pollution-name">良</span>
-                        <span class="pollution-num">85</span>
+                        <span class="pollution-num skin-font-white">85</span>
                         <span class="show-vertical">|</span>
                     </div>
                 </div>
                 <div class="utility">
                     <div class="box">
-                        <a target="_blank" href="http://vip.baidu.com/act/xuyuan"><span>宝箱</span></a>
+                        <a target="_blank" href="http://vip.baidu.com/act/xuyuan"><span class="skin-font-white">宝箱</span></a>
                     </div>
-                    <div class="skin"><span>换肤</span></div>
-                    <div class="message"><span>消息</span></div>
+                    <div id="skin-up-btn" class="skin"><span class="skin-font-white">换肤</span></div>
+                    <div class="message"><span class="skin-font-white">消息</span></div>
                 </div>
             </div>
         </div>
         <!--主页图片以及搜索输入框-->
         <div class="main cf">
             <div class="logo">
-                <img src="./static/images/bd_logo1.png">
+                <img class="skin-main-logo" src="./static/images/bd_logo1.png">
             </div>
             <form action="https://www.baidu.com/s">
                 <div id="input_div" class="text_span">

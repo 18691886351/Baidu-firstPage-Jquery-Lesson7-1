@@ -120,7 +120,7 @@ $(document).ready(function() {
         $(this).siblings().children(".name").css({ "color": "black", "font-weight": "normal" });
     })
 
-
+    /*换肤中透明度实现点击与拖动*/
     var settOpacity = function(e) {
         var _Y = $("#s_bg_ajust_bar").offset().top;
         var _X = $("#s_bg_ajust_bar").offset().left;
@@ -148,6 +148,18 @@ $(document).ready(function() {
         //alert("_percent=" + _percent);
         $("#s_bg_ajust_txt").text(_percent + "%");
     }
+    var ori_main_logo="./static/images/bd_logo1.png";
+
+    var change_ski = function(object) {
+        var data_index = $(object).attr("data-index");
+        var img_url = "https://ss2.bdstatic.com/kfoZeXSm1A5BphGlnYG/skin/" + data_index + ".jpg?2";
+        $(".skin-container").css({ "background-color": "#404040", "background-image": "url(" + img_url + ")" });
+        $(".skin-font-white").css({ "color":"white" });
+        //修改主页logo
+        $(".skin-main-logo").attr("src","https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/logo_white.png");
+        //修改搜索btn的背景
+        $("#baidu_bnt").css({"background-image":"url('https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/skin_dark_aab96bcc.png')","background-position":"-206px 0","color":"black"});
+    }
 
     $("#s_bg_ajust_bar").click(settOpacity);
     /*实现拖动效果*/
@@ -170,4 +182,40 @@ $(document).ready(function() {
             settOpacity(event);
         }
     })
+
+
+    /*换肤中鼠标mouseover过list-item时
+    1.文字显示出现
+    2.shadow透明度发生变化
+    mouseout时,文字隐藏，shadow透明度变为0.
+    3.改变预览img的src
+    */
+    $(".skin-img-item").mouseover(function() {
+        $(this).children(".skin-img-item-writer").show();
+        $(this).children(".skin-img-shadow").css({ "opacity": "0.5" });
+        var img_sr = $(this).children(".skin-img-item-img").attr("src");
+        $("#s_skin_preview_skin").attr("src", img_sr);
+    });
+
+    $(".skin-img-item").mouseout(function() {
+        $(this).children(".skin-img-item-writer").hide();
+        $(this).children(".skin-img-shadow").css({ "opacity": "0" });
+    });
+
+    /*设置皮肤*/
+    $(".skin-img-item").click(function() {
+        change_ski(this);
+    });
+
+    /*点击收起按钮，皮肤模块收起来*/
+    $("#skin-up-btn").click(function() {
+        $(".skiner").slideToggle();
+    })
+
+    $("#skin-close-btn").click(function() {
+        $(".skiner").slideToggle();
+    })
+
+
+
 })
