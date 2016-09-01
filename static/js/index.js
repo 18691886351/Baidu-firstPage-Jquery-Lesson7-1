@@ -1,63 +1,91 @@
-var nav_setting = document.getElementById("setting");
-var nav_setting_menu = document.getElementById("setting_menu");
-
-var products = document.getElementById("products");
-var products_menu = document.getElementById("products_menu");
-
-var custom_nav_menus = document.querySelectorAll(".custom .custom-nav .menu");
-
-
-/*nav_setting.onmouseover = function() {
-    nav_setting_menu.style.display = "block"
-}
-nav_setting.onmouseout = function() {
-    nav_setting_menu.style.display = "none"
-}
-*/
-/*products.onmouseover = function() {
-    products_menu.style.display = "block"
-}
-products.onmouseout = function() {
-    products_menu.style.display = "none"
-}
-*/
-
-/*
-实现了搜索栏获得焦点后改变其父级元素的边框颜色,失去焦点还原
-*/
-/*function changeInputParentBorderColor() {
-    if (document.getElementById("input_div").className == "text_span") {
-        document.getElementById("input_div").className = "text_span_focus"
-    } else {
-        document.getElementById("input_div").className = "text_span"
-    }
-}
-*/
-
-/*
-实现了导航栏目中“百度一下”的鼠标moveover以及moveout事件
-*/
-/*function baiduBntOnmouseoverOrOut() {
-    if (document.getElementById("baidu_bnt").className == "baidu_bnt_onmouseout") {
-        document.getElementById("baidu_bnt").className = "baidu_bnt_onmouseover"
-    } else {
-        document.getElementById("baidu_bnt").className = "baidu_bnt_onmouseout"
-    }
-}*/
-
-
-/*
-实现了导航栏目中“搜索栏camera”的鼠标moveover以及moveout事件
-*/
-/*function cameramouseoverOrOut() {
-    if (document.getElementById("camera").className == "camera_onmouseout") {
-        document.getElementById("camera").className = "camera_onmouseover"
-    } else {
-        document.getElementById("camera").className = "camera_onmouseout"
-    }
-}
-*/
 $(document).ready(function() {
+
+    //随着换肤透明度，改变自定义模块的class，用0-100
+    var change_opacity = function(opacity) {
+        var _reg = new RegExp('(skin_opacity_[0-9]{1,3})');
+        var _className = $(".custom").attr("class");
+        $(".custom").removeClass(_className.match(_reg)[0]);
+        $(".custom").addClass("skin_opacity_" + opacity);
+        localStorage.opacity = opacity; //保存透明度
+    }
+
+    var reset_opacity = function() {
+        var _reg = new RegExp('(skin_opacity_[0-9]{1,3})');
+        var _className = $(".custom").attr("class");
+        $(".custom").removeClass(_className.match(_reg)[0]);
+        $(".custom").addClass("skin_opacity_200"); //skin_opacity_200是不存在的，表示不进行透明度处理
+        localStorage.removeItem("opacity");
+    }
+
+    var ori_main_logo = "./static/images/bd_logo1.png";
+
+    var change_ski = function(data_index) {
+        var img_url = "https://ss2.bdstatic.com/kfoZeXSm1A5BphGlnYG/skin/" + data_index + ".jpg?2";
+        $(".skin-container").css({ "background-color": "#404040", "background-image": "url(" + img_url + ")" });
+        $(".skin-font-white").css({ "color": "white" });
+        //修改主页logo
+        $(".skin-main-logo").attr("src", "https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/logo_white.png");
+        //修改搜索btn的背景
+        $("#baidu_bnt").css({ "background-image": "url('https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/skin_dark_aab96bcc.png')", "background-position": "-206px 0", "color": "black" });
+        //保存skinName
+        localStorage.isSkin = 1; //使用皮肤
+        localStorage.skinName = data_index; //保存皮肤序号
+    }
+
+    var reset_ski = function() {
+        $(".skin-container").attr("style","");
+        $(".skin-font-white").attr("style","");
+        $(".skin-main-logo").attr("src", ori_main_logo);
+        $("#baidu_bnt").css({});
+        localStorage.removeItem("skinName");
+    }
+
+    /*换肤中透明度实现点击与拖动*/
+    var settOpacity = function(e) {
+        var _Y = $("#s_bg_ajust_bar").offset().top;
+        var _X = $("#s_bg_ajust_bar").offset().left;
+        var _mouseX = e.pageX;
+        var _width = $("#s_bg_ajust_bar").width();
+        var _btnwidth = $("#s_bg_ajust_btn").width();
+        var _offset = 0;
+        if (_mouseX <= _X) {
+            _offset = 0;
+        } else if ((_mouseX - _X) < (_btnwidth / 2)) {
+            _offset = 0;
+        } else {
+            _offset = _mouseX - _X - (_btnwidth / 2);
+        }
+        //alert("mouseX=" + _mouseX + ",X=" + _X + ",Y=" + _Y);
+        /*      
+        alert("mouseX=" + mouseX + ",X=" + X + ",Y=" + Y);
+        alert(mouseX - X);
+        */
+        $("#s_bg_ajust_btn").css({ "transform": "translate3d(" + _offset + "px,0,0)" });
+        //alert("_offset=" + _offset + ",_width=" + _width + ",_width-_btnwidth=" + (_width - _btnwidth) + ",_btnwidth=" + _btnwidth);
+        var _percent = Math.abs(((_offset / (_width - _btnwidth)) * 100).toFixed(0));
+        if (_percent > 0) _percent = _percent + 5 - _percent % 5;
+        if (_percent > 100) _percent = 100;
+        //alert("_percent=" + _percent);
+        $("#s_bg_ajust_txt").text(_percent + "%");
+        change_opacity(_percent);
+    }
+
+    /*从localStorage中读取isSkin和skinName与透明度*/
+    //localStorage.clear();
+    var isSkin = localStorage.isSkin;
+    if (isSkin == null||isSkin==0) {
+        isSkin = 0; //不使用皮肤
+    } else {
+        var _skinName = localStorage.skinName;
+        if (_skinName != null || _skinName.length != 0) {
+            change_ski(_skinName);
+        }
+        var _opacity = localStorage.opacity;
+        if (_opacity != null) {
+            change_opacity(_opacity);
+        }
+    }
+
     /*实现了导航栏目中“搜索栏camera”的鼠标moveover以及moveout事件*/
     $("#camera").mouseover(function() {
         $(this).removeClass("camera_onmouseout");
@@ -115,51 +143,10 @@ $(document).ready(function() {
         $("#" + menu_name).show();
         $("#" + menu_name).siblings().hide();
         $(this).css({ "background-color": "gray" })
-        $(this).siblings().css({ "background-color": "white" });
+        $(this).siblings().css({ "background-color": "transparent" });
         $(this).children(".name").css({ "color": "white", "font-weight": "bold" });
         $(this).siblings().children(".name").css({ "color": "black", "font-weight": "normal" });
     })
-
-    /*换肤中透明度实现点击与拖动*/
-    var settOpacity = function(e) {
-        var _Y = $("#s_bg_ajust_bar").offset().top;
-        var _X = $("#s_bg_ajust_bar").offset().left;
-        var _mouseX = e.pageX;
-        var _width = $("#s_bg_ajust_bar").width();
-        var _btnwidth = $("#s_bg_ajust_btn").width();
-        var _offset = 0;
-        if (_mouseX <= _X) {
-            _offset = 0;
-        } else if ((_mouseX - _X) < (_btnwidth / 2)) {
-            _offset = 0;
-        } else {
-            _offset = _mouseX - _X - (_btnwidth / 2);
-        }
-        //alert("mouseX=" + _mouseX + ",X=" + _X + ",Y=" + _Y);
-        /*      
-        alert("mouseX=" + mouseX + ",X=" + X + ",Y=" + Y);
-        alert(mouseX - X);
-        */
-        $("#s_bg_ajust_btn").css({ "transform": "translate3d(" + _offset + "px,0,0)" });
-        //alert("_offset=" + _offset + ",_width=" + _width + ",_width-_btnwidth=" + (_width - _btnwidth) + ",_btnwidth=" + _btnwidth);
-        var _percent = Math.abs(((_offset / (_width - _btnwidth)) * 100).toFixed(0));
-        if (_percent > 0) _percent = _percent + 5 - _percent % 5;
-        if (_percent > 100) _percent = 100;
-        //alert("_percent=" + _percent);
-        $("#s_bg_ajust_txt").text(_percent + "%");
-    }
-    var ori_main_logo="./static/images/bd_logo1.png";
-
-    var change_ski = function(object) {
-        var data_index = $(object).attr("data-index");
-        var img_url = "https://ss2.bdstatic.com/kfoZeXSm1A5BphGlnYG/skin/" + data_index + ".jpg?2";
-        $(".skin-container").css({ "background-color": "#404040", "background-image": "url(" + img_url + ")" });
-        $(".skin-font-white").css({ "color":"white" });
-        //修改主页logo
-        $(".skin-main-logo").attr("src","https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/logo_white.png");
-        //修改搜索btn的背景
-        $("#baidu_bnt").css({"background-image":"url('https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/skin_dark_aab96bcc.png')","background-position":"-206px 0","color":"black"});
-    }
 
     $("#s_bg_ajust_bar").click(settOpacity);
     /*实现拖动效果*/
@@ -183,7 +170,6 @@ $(document).ready(function() {
         }
     })
 
-
     /*换肤中鼠标mouseover过list-item时
     1.文字显示出现
     2.shadow透明度发生变化
@@ -204,18 +190,29 @@ $(document).ready(function() {
 
     /*设置皮肤*/
     $(".skin-img-item").click(function() {
-        change_ski(this);
+        var data_index = $(this).attr("data-index");
+        change_ski(data_index);
     });
 
-    /*点击收起按钮，皮肤模块收起来*/
+    /*点击收起按钮，皮肤模块打开*/
     $("#skin-up-btn").click(function() {
-        $(".skiner").slideToggle();
-    })
-
+            $(".skiner").slideToggle();
+        })
+        /*点击收起按钮，皮肤模块收起来*/
     $("#skin-close-btn").click(function() {
         $(".skiner").slideToggle();
     })
 
+    /*点击不使用皮肤，界面还原，localStorage.isSkin=0表示未使用皮肤*/
+    $("#noskin_btn").click(function() {
+        reset_opacity();
+        reset_ski();
+        localStorage.isSkin = 0;
+    })
 
-
+    $(window).scroll(function ()
+    {
+        var st = $(this).scrollTop();
+        console.log(st);
+    });
 })
