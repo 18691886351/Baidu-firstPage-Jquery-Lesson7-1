@@ -22,11 +22,11 @@ $(document).ready(function() {
     var change_ski = function(data_index) {
         var img_url = "https://ss2.bdstatic.com/kfoZeXSm1A5BphGlnYG/skin/" + data_index + ".jpg?2";
         $(".skin-container").css({ "background-color": "#404040", "background-image": "url(" + img_url + ")" });
-        $(".skin-font-white").css({ "color": "white" });
+        $(".skin-font").addClass("skin-font-white");
         //修改主页logo
         $(".skin-main-logo").attr("src", "https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/logo_white.png");
         //修改搜索btn的背景
-        $("#baidu_bnt").css({ "background-image": "url('https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/skin_dark_aab96bcc.png')", "background-position": "-206px 0", "color": "black" });
+        $("#baidu_bnt").addClass("skin-baidu-bnt");
         //保存skinName
         localStorage.isSkin = 1; //使用皮肤
         localStorage.skinName = data_index; //保存皮肤序号
@@ -34,9 +34,9 @@ $(document).ready(function() {
 
     var reset_ski = function() {
         $(".skin-container").attr("style", "");
-        $(".skin-font-white").attr("style", "");
+        $(".skin-font").removeClass("skin-font-white");
         $(".skin-main-logo").attr("src", ori_main_logo);
-        $("#baidu_bnt").css({});
+        $("#baidu_bnt").removeClass("skin-baidu-bnt");
         localStorage.removeItem("skinName");
     }
 
@@ -233,8 +233,33 @@ $(document).ready(function() {
     });
 
     $("#s_top_feed").click(function() {
-        $('body,html').animate({ scrollTop: 0 }, 1000);
+        $('body,html').animate({ scrollTop: 0 }, 500);
     });
+
+    /*搜索栏input_div,获取焦点与失去焦点改变class*/
+    $("#baidu_text").focus(function() {
+        $(this).parent().addClass("text_span_focus");
+    });
+    $("#baidu_text").blur(function() {
+        $(this).parent().removeClass("text_span_focus");
+    });
+
+    //toper中的input_div,获取焦点与失去焦点改变class
+    $("#baidu_text2").focus(function() {
+        $(this).parent().addClass("text_span_focus");
+    });
+    $("#baidu_text2").blur(function() {
+        $(this).parent().removeClass("text_span_focus");
+    });
+
+    //mouseover展开weather-detail-panel，mouseout闭合weather-detail-panel
+    $("#show-weather").mouseover(function() {
+        $("#weather-detail-panel").show();
+    })
+
+    $("#show-weather").mouseout(function() {
+        $("#weather-detail-panel").hide();
+    })
 
     $(window).scroll(function() {
         var st = $(this).scrollTop();
@@ -246,5 +271,12 @@ $(document).ready(function() {
             $("#toper-search").show();
             $("#s_top_feed").show();
         }
+
+        if (st < 50) {
+            $("#s_top_feed").hide();
+        } else {
+            $("#s_top_feed").show();
+        }
+
     });
 })

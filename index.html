@@ -20,8 +20,8 @@
                     <img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_ca79a146.png">
                 </div>
                 <form action="https://www.baidu.com/s">
-                    <div id="input_div" class="text_span">
-                        <input class="baidu_text" id="baidu_text" type="text" name="wd" />
+                    <div id="input_div2" class="text_span">
+                        <input class="baidu_text" id="baidu_text2" type="text" name="wd" />
                         <input type="hidden" name="cl" value="3" />
                         <input type="hidden" name="ie" value="utf-8">
                         <span id="camera2" class="camera camera_onmouseout"></span>
@@ -314,15 +314,15 @@
         <div class="nav-shell">
             <div class="nav">
                 <ul>
-                    <li><a class="nav_a skin-font-white" href="http://www.nuomi.com/?cid=002540">糯米</a></li>
-                    <li><a class="nav_a skin-font-white" href="http://news.baidu.com/">新闻</a></li>
-                    <li><a class="nav_a skin-font-white" href="http://www.hao123.com/">hao123</a></li>
-                    <li><a class="nav_a skin-font-white" href="http://map.baidu.com/">地图</a></li>
-                    <li><a class="nav_a skin-font-white" href="http://v.baidu.com/">视频</a></li>
-                    <li><a class="nav_a skin-font-white" href="http://tieba.baidu.com/">贴吧</a></li>
-                    <li><a class="nav_a skin-font-white" href="https://passport.baidu.com/v2/?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2F">登录</a></li>
+                    <li><a class="nav_a skin-font" href="http://www.nuomi.com/?cid=002540">糯米</a></li>
+                    <li><a class="nav_a skin-font" href="http://news.baidu.com/">新闻</a></li>
+                    <li><a class="nav_a skin-font" href="http://www.hao123.com/">hao123</a></li>
+                    <li><a class="nav_a skin-font" href="http://map.baidu.com/">地图</a></li>
+                    <li><a class="nav_a skin-font" href="http://v.baidu.com/">视频</a></li>
+                    <li><a class="nav_a skin-font" href="http://tieba.baidu.com/">贴吧</a></li>
+                    <li><a class="nav_a skin-font" href="https://passport.baidu.com/v2/?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2F">登录</a></li>
                     <li id="setting" class="setting">
-                        <a class="nav_a skin-font-white" href="#">设置</a>
+                        <a class="nav_a skin-font" href="#">设置</a>
                         <div id="setting_menu" class="setting_menu">
                             <div class="bdnuarrow">
                                 <em></em>
@@ -387,28 +387,98 @@
                 </ul>
             </div>
             <div class="tools">
-                <div class="show-weather">
+                <div id="show-weather" class="show-weather">
                     <div class="city">
-                        <span class="city-name skin-font-white">西安：</span>
+                        <span class="city-name skin-font">西安：</span>
                     </div>
                     <div class="weather">
-                        <span class="weather-icon"> <i class="iconfont skin-font-white">&#xe611;</i></span>
+                        <span class="weather-icon"> <i class="iconfont skin-font">&#xe611;</i></span>
                     </div>
                     <div class="temp">
-                        <span class="temp-num skin-font-white">34°C</span>
+                        <span class="temp-num skin-font">34°C</span>
                     </div>
                     <div class="pollution">
                         <span class="pollution-name">良</span>
-                        <span class="pollution-num skin-font-white">85</span>
+                        <span class="pollution-num skin-font">85</span>
                         <span class="show-vertical">|</span>
+                    </div>
+                    <!--天气弹出菜单-->
+                    <div id="weather-detail-panel" class="weather-detail-panel">
+                        <div class="bdnuarrow">
+                            <em></em>
+                            <i></i>
+                        </div>
+                        <div class="title">
+                            <span class="date">09月02日农历 八月初二</span>
+                            <span class="future-weather-btn">未来七天天气</span>
+                        </div>
+                        <div class="content cf">
+                            <ul class="weather-week-info">
+                                <li class="item">
+                                    <a target="_blank" href="https://www.baidu.com/s?tn=baidutop10&rsv_idx=2&wd=%E8%A5%BF%E5%AE%89%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5">
+                                        <span>今天(周五)</span>
+                                        <span class="icon">
+                                            <img class="everyday-icon" src="https://ss0.bdstatic.com/k4oZeXSm1A5BphGlnYG/icon/weather/aladdin/jpg/a0.jpg">
+                                        </span>
+                                        <span>33°C</span>
+                                        <span>晴转多云</span>
+                                        <span>东风微风</span>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a target="_blank" href="https://www.baidu.com/s?tn=baidutop10&rsv_idx=2&wd=%E8%A5%BF%E5%AE%89%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5">
+                                        <span>明天(周六)</span>
+                                        <span class="icon">
+                                            <img class="everyday-icon" src="https://ss1.bdstatic.com/kvoZeXSm1A5BphGlnYG/icon/weather/aladdin/jpg/a1.jpg">
+                                        </span>
+                                        <span>29-19°C</span>
+                                        <span>多云</span>
+                                        <span>东风微风</span>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a target="_blank" href="https://www.baidu.com/s?tn=baidutop10&rsv_idx=2&wd=%E8%A5%BF%E5%AE%89%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5">
+                                        <span>后天(周日)</span>
+                                        <span class="icon">
+                                            <img class="everyday-icon" src="https://ss1.bdstatic.com/kvoZeXSm1A5BphGlnYG/icon/weather/aladdin/jpg/a1.jpg">
+                                        </span>
+                                        <span>29-19°C</span>
+                                        <span>多云</span>
+                                        <span>东风微风</span>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a target="_blank" href="https://www.baidu.com/s?tn=baidutop10&rsv_idx=2&wd=%E8%A5%BF%E5%AE%89%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5">
+                                        <span>周一</span>
+                                        <span class="icon">
+                                            <img class="everyday-icon" src="https://ss1.bdstatic.com/kvoZeXSm1A5BphGlnYG/icon/weather/aladdin/jpg/a1.jpg">
+                                        </span>
+                                        <span>28-19°C</span>
+                                        <span>多云</span>
+                                        <span>东风微风</span>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a target="_blank" href="https://www.baidu.com/s?tn=baidutop10&rsv_idx=2&wd=%E8%A5%BF%E5%AE%89%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5">
+                                        <span>周二</span>
+                                        <span class="icon">
+                                            <img class="everyday-icon" src="https://ss2.bdstatic.com/kfoZeXSm1A5BphGlnYG/icon/weather/aladdin/jpg/a2.jpg">
+                                        </span>
+                                        <span>28-19°C</span>
+                                        <span>多云</span>
+                                        <span>东风微风</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="utility">
                     <div class="box">
-                        <a target="_blank" href="http://vip.baidu.com/act/xuyuan"><span class="skin-font-white">宝箱</span></a>
+                        <a target="_blank" href="http://vip.baidu.com/act/xuyuan"><span class="skin-font">宝箱</span></a>
                     </div>
-                    <div id="skin-up-btn" class="skin"><span class="skin-font-white">换肤</span></div>
-                    <div class="message"><span class="skin-font-white">消息</span></div>
+                    <div id="skin-up-btn" class="skin"><span class="skin-font">换肤</span></div>
+                    <div class="message"><span class="skin-font">消息</span></div>
                 </div>
             </div>
         </div>
@@ -419,7 +489,7 @@
             </div>
             <form action="https://www.baidu.com/s">
                 <div id="input_div" class="text_span">
-                    <input id="baidu_text" type="text" name="wd" />
+                    <input id="baidu_text" class="baidu_text" type="text" name="wd" />
                     <input type="hidden" name="cl" value="3" />
                     <input type="hidden" name="ie" value="utf-8">
                     <span id="camera" class="camera camera_onmouseout"></span>
