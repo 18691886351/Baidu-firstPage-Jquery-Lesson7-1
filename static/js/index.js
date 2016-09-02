@@ -33,8 +33,8 @@ $(document).ready(function() {
     }
 
     var reset_ski = function() {
-        $(".skin-container").attr("style","");
-        $(".skin-font-white").attr("style","");
+        $(".skin-container").attr("style", "");
+        $(".skin-font-white").attr("style", "");
         $(".skin-main-logo").attr("src", ori_main_logo);
         $("#baidu_bnt").css({});
         localStorage.removeItem("skinName");
@@ -73,7 +73,7 @@ $(document).ready(function() {
     /*从localStorage中读取isSkin和skinName与透明度*/
     //localStorage.clear();
     var isSkin = localStorage.isSkin;
-    if (isSkin == null||isSkin==0) {
+    if (isSkin == null || isSkin == 0) {
         isSkin = 0; //不使用皮肤
     } else {
         var _skinName = localStorage.skinName;
@@ -93,6 +93,17 @@ $(document).ready(function() {
     })
 
     $("#camera").mouseout(function() {
+        $(this).removeClass("camera_onmouseover");
+        $(this).addClass("camera_onmouseout");
+    })
+
+    /*顶部搜索栏*/
+    $("#camera2").mouseover(function() {
+        $(this).removeClass("camera_onmouseout");
+        $(this).addClass("camera_onmouseover");
+    })
+
+    $("#camera2").mouseout(function() {
         $(this).removeClass("camera_onmouseover");
         $(this).addClass("camera_onmouseout");
     })
@@ -210,9 +221,30 @@ $(document).ready(function() {
         localStorage.isSkin = 0;
     })
 
-    $(window).scroll(function ()
-    {
+    /*s_top_feed 回到顶部按钮mouseover与mouseout事件*/
+    $("#s_top_feed").mouseover(function() {
+        $(this).children(".text").show();
+        $(this).children(".icon").hide();
+    });
+
+    $("#s_top_feed").mouseout(function() {
+        $(this).children(".text").hide();
+        $(this).children(".icon").show();
+    });
+
+    $("#s_top_feed").click(function() {
+        $('body,html').animate({ scrollTop: 0 }, 1000);
+    });
+
+    $(window).scroll(function() {
         var st = $(this).scrollTop();
-        console.log(st);
+        console.log("st=" + st);
+        if (st < 300) {
+            $("#toper-search").hide();
+            $("#s_top_feed").hide();
+        } else {
+            $("#toper-search").show();
+            $("#s_top_feed").show();
+        }
     });
 })

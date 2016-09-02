@@ -51,7 +51,7 @@ body {
 .pc {
     display: block;
     overflow: hidden;
-    min-height:100vh;
+    min-height: 100vh;
 }
 
 .skin-container {
@@ -65,6 +65,9 @@ body {
     zoom: 1;
 }
 
+
+/*************************************顶部搜索栏begin*****************************/
+
 .toper-search {
     position: fixed;
     _position: absolute;
@@ -73,10 +76,133 @@ body {
     height: 74px;
     z-index: 10;
     width: 100%;
+    background-color: #fff;
+    opacity: 0.98;
+    display: none;
 }
 
-/*logo，搜索栏*/
+.toper-search .toper-search-content {
+    width: 890px;
+    margin: 0 auto;
+    height: 74px;
+    line-height: 74px;
+}
 
+.toper-search .toper-search-content .logo {
+    float: left;
+}
+
+.toper-search .toper-search-content .logo img {
+    display: block;
+    margin-top: 15px;
+    width: 101px;
+}
+
+.toper-search .toper-search-content form {
+    display: block;
+    float: left;
+}
+
+.toper-search .toper-search-content form .text_span {
+    border: 1px solid #b6b6b6;
+    border-right: 0;
+    background: #fff;
+    width: 539px;
+    height: 34px;
+    position: relative;
+    border-right-width: 0px;
+    margin-right: 0px;
+    letter-spacing: -0.5em;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.toper-search .toper-search-content form .text_span .baidu_text {
+    display: block;
+    height: 22px;
+    width: 500px;
+    padding: 0;
+    margin: 6px 0 0 7px;
+    outline: 0;
+    border: 0;
+}
+
+.toper-search .toper-search-content form .button_span {
+    margin-top: 20px;
+    float: left;
+}
+
+.toper-search .toper-search-content form .button_span .baidu_bnt {
+    height: 36px;
+    width: 100px;
+    letter-spacing: 1px;
+    font-size: 15px;
+    border: 0;
+    _margin-left: -1px;
+    display: block;
+    float: left;
+    background: #3385ff;
+    cursor: pointer;
+    color: #fff;
+    border-bottom: 1px solid #2d78f4;
+}
+
+.toper-search .toper-search-content form .text_span .camera {
+    position: absolute;
+    right: 11px;
+    top: 30%;
+    height: 16px;
+    width: 18px;
+    background: #fff url(../images/soutu_icons_sample_6a1e1619.png) no-repeat;
+}
+
+.toper-search .toper-search-content form .text_span .camera_onmouseout {
+    background-position: -229px 0px;
+    /*background-position 必须出现在background之后*/
+}
+
+.toper-search .toper-search-content form .text_span .camera_onmouseover {
+    background-position: -229px -21px;
+    cursor: pointer;
+}
+
+
+/*************************************顶部搜索栏end*****************************/
+
+/*************************************回到顶部begin*****************************/
+.top-feed {
+    width: 38px;
+    height: 38px;
+    border: 1px solid #e3e3e3;
+    background-color: #e3e3e3;
+    position: fixed;
+    right: 15%;
+    bottom: 20px;
+    display:none;
+}
+
+.top-feed .text {
+    font-size: 13px;
+    padding: 5px;
+    display: none;
+}
+
+.top-feed .icon {
+    display: block;
+    width: 38px;
+    height: 38px;
+    line-height:38px;
+    text-align:center;
+}
+
+.top-feed .icon i{
+    font-size: 28px !important;
+}
+
+/*************************************回到顶部end*****************************/
+
+/*logo，搜索栏*/
 .main {
     margin: 0 auto;
     width: 650px;
@@ -202,7 +328,7 @@ body {
 
 .skiner .skiner-header .skin-up {
     margin-left: 50px;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .skiner .skiner-header .skin-up .bg i {
@@ -405,6 +531,8 @@ body {
     text-align: center;
     width: 264px;
 }
+
+
 /********************换肤end****************************************************/
 
 
@@ -805,10 +933,9 @@ body {
     margin-left: 15px;
 }
 
-.nav-shell .tools .utility .box a{
-    text-decoration:none;
+.nav-shell .tools .utility .box a {
+    text-decoration: none;
 }
-
 
 .nav-shell .tools .utility div span {
     display: block;
@@ -1247,7 +1374,9 @@ body {
     float: left;
 }
 
+
 /**custom皮肤透明度******************************************/
+
 .skin_opacity_0 {
     background: none !important;
     background-image: linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%) !important;
@@ -1373,89 +1502,92 @@ body {
     background-image: linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%) !important;
     border: 1px solid transparent;
 }
-.skin_opacity_0 .skin_opacity_border{
-    border-color: rgba(226,226,226,0) !important;
+
+.skin_opacity_0 .skin_opacity_border {
+    border-color: rgba(226, 226, 226, 0) !important;
 }
 
-.skin_opacity_5 .skin_opacity_border{
-    border-color: rgba(226,226,226,0.05) !important;
+.skin_opacity_5 .skin_opacity_border {
+    border-color: rgba(226, 226, 226, 0.05) !important;
 }
 
-.skin_opacity_10 .skin_opacity_border{
-    border-color: rgba(226,226,226,0.1) !important;
+.skin_opacity_10 .skin_opacity_border {
+    border-color: rgba(226, 226, 226, 0.1) !important;
 }
 
-.skin_opacity_15 .skin_opacity_border{
-    border-color: rgba(226,226,226,0.15) !important;
+.skin_opacity_15 .skin_opacity_border {
+    border-color: rgba(226, 226, 226, 0.15) !important;
 }
 
-.skin_opacity_20 .skin_opacity_border{
-    border-color: rgba(226,226,226,0.2) !important;
+.skin_opacity_20 .skin_opacity_border {
+    border-color: rgba(226, 226, 226, 0.2) !important;
 }
 
-.skin_opacity_25 .skin_opacity_border{
-    border-color: rgba(226,226,226,0.25) !important;
+.skin_opacity_25 .skin_opacity_border {
+    border-color: rgba(226, 226, 226, 0.25) !important;
 }
 
-.skin_opacity_30 .skin_opacity_border{
-    border-color: rgba(226,226,226,0.3) !important;
+.skin_opacity_30 .skin_opacity_border {
+    border-color: rgba(226, 226, 226, 0.3) !important;
 }
 
-.skin_opacity_35 .skin_opacity_border{
-    border-color: rgba(226,226,226,0.35) !important;
+.skin_opacity_35 .skin_opacity_border {
+    border-color: rgba(226, 226, 226, 0.35) !important;
 }
 
-.skin_opacity_40 .skin_opacity_border{
-    border-color: rgba(226,226,226,0.40) !important;
+.skin_opacity_40 .skin_opacity_border {
+    border-color: rgba(226, 226, 226, 0.40) !important;
 }
 
-.skin_opacity_45 .skin_opacity_border{
-    border-color: rgba(226,226,226,0.45) !important;
+.skin_opacity_45 .skin_opacity_border {
+    border-color: rgba(226, 226, 226, 0.45) !important;
 }
 
-.skin_opacity_50 .skin_opacity_border{
-    border-color: rgba(226,226,226,0.50) !important;
+.skin_opacity_50 .skin_opacity_border {
+    border-color: rgba(226, 226, 226, 0.50) !important;
 }
 
-.skin_opacity_55 .skin_opacity_border{
-    border-color: rgba(226,226,226,0.55) !important;
+.skin_opacity_55 .skin_opacity_border {
+    border-color: rgba(226, 226, 226, 0.55) !important;
 }
 
-.skin_opacity_60 .skin_opacity_border{
-    border-color: rgba(226,226,226,0.6) !important;
+.skin_opacity_60 .skin_opacity_border {
+    border-color: rgba(226, 226, 226, 0.6) !important;
 }
 
-.skin_opacity_65 .skin_opacity_border{
-    border-color: rgba(226,226,226,0.65) !important;
+.skin_opacity_65 .skin_opacity_border {
+    border-color: rgba(226, 226, 226, 0.65) !important;
 }
 
-.skin_opacity_70 .skin_opacity_border{
-    border-color: rgba(226,226,226,0.70) !important;
+.skin_opacity_70 .skin_opacity_border {
+    border-color: rgba(226, 226, 226, 0.70) !important;
 }
 
-.skin_opacity_75 .skin_opacity_border{
-    border-color: rgba(226,226,226,0.75) !important;
+.skin_opacity_75 .skin_opacity_border {
+    border-color: rgba(226, 226, 226, 0.75) !important;
 }
 
-.skin_opacity_80 .skin_opacity_border{
-    border-color: rgba(226,226,226,0.80) !important;
+.skin_opacity_80 .skin_opacity_border {
+    border-color: rgba(226, 226, 226, 0.80) !important;
 }
 
-.skin_opacity_85 .skin_opacity_border{
-    border-color: rgba(226,226,226,0.85) !important;
+.skin_opacity_85 .skin_opacity_border {
+    border-color: rgba(226, 226, 226, 0.85) !important;
 }
 
-.skin_opacity_90 .skin_opacity_border{
-    border-color: rgba(226,226,226,0.90) !important;
+.skin_opacity_90 .skin_opacity_border {
+    border-color: rgba(226, 226, 226, 0.90) !important;
 }
 
-.skin_opacity_95 .skin_opacity_border{
-    border-color: rgba(226,226,226,0.95) !important;
+.skin_opacity_95 .skin_opacity_border {
+    border-color: rgba(226, 226, 226, 0.95) !important;
 }
 
-.skin_opacity_100 .skin_opacity_border{
-    border-color: rgba(226,226,226,1) !important;
+.skin_opacity_100 .skin_opacity_border {
+    border-color: rgba(226, 226, 226, 1) !important;
 }
+
+
 /**custom皮肤透明度******************************************/
 
 .foot {
